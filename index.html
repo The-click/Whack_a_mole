@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack a mole</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Whack a mole! <span class="score">0</span></h1>
+    <button class="start" onclick="startGame()">start
+    </button>
+    <div class="game">
+        <div class="hole hole1">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole2">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole3">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole4">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole5">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole6">
+            <div class="mole"></div>
+        </div>
+    </div>
+    <div class="leaderboard">
+        <h3 class="board__title">Leader board this level</h3>
+        <span class="leader">1. ...</span>
+        <span class="leader">2. ...</span>
+        <span class="leader">3. ...</span>
+    </div>
+
+    <div class="level__block">
+        Level <span class="level__current">1</span>
+    </div>
+    <div class="tasks">
+        <h3 class="tasks__title">Tasks in this level</h3>
+        <span class="task">Whack <span class="task__mole">8</span> mole</span>
+    </div>
+    <div class="levels">
+        <span class="level here">1</span>
+        <span class="level">2</span>
+        <span class="level">3</span>
+        <span class="level">4</span>
+        <span class="level">5</span>
+    </div>
+    <script src='script.js'></script>
+</body>
+
+</html>

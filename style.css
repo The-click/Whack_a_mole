@@ -1,0 +1,212 @@
+* {
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Amatic SC', cursive;
+    background-color: beige;
+}
+
+h1 {
+    font-size: 9rem;
+    margin: 0px;
+    margin-bottom: 0px;
+}
+
+.score {
+    display: inline-block;
+    background-color: rgba(0, 200, 100, .4);
+    padding: 0 10px;
+    border-radius: 10px;
+    line-height: normal;
+}
+
+.start {
+    padding: 10px 15px;
+    border: none;
+    background-color: aqua;
+    font-size: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Amatic SC', cursive;
+}
+
+.game {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px auto 0 auto;
+}
+
+.hole {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hole1 {}
+
+.mole {
+    background: url('./assets/img/mole.svg') bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+}
+
+.hole.up .mole {
+    top: 0%;
+}
+
+.hole::after {
+    display: block;
+    background: url('./assets/img/dirt.svg') bottom center no-repeat;
+    background-size: contain;
+    content: '';
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+}
+
+.hole2 {}
+
+.hole3 {}
+
+.hole4 {}
+
+.hole5 {}
+
+.hole6 {}
+
+
+/* leader board */
+
+.leaderboard {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border: 10px solid #ff00ff;
+    border-radius: 10px;
+    font-size: 2.5rem;
+    padding-left: 20px;
+    padding-top: 40px;
+    gap: 15px 0;
+}
+
+.board__title {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0px;
+    font-size: 2.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.leader {
+    font-weight: 700;
+}
+
+
+/* Level */
+
+.level__block {
+    position: absolute;
+    bottom: 5%;
+    font-size: 5rem;
+    background-color: rgba(0, 200, 100, .4);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.level__current {
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.levels {
+    position: absolute;
+    right: 5%;
+    font-size: 5rem;
+    background-color: rgba(46, 31, 252, 0.4);
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: 20px;
+    transition: all .8s;
+    justify-content: center;
+    align-items: center;
+}
+
+.level {
+    display: inline-block;
+}
+
+.level.here {
+    background-color: rgba(68, 252, 31, 0.7);
+    padding: 2px 10px;
+    border: 5px dashed yellow;
+    border-radius: 20px;
+}
+
+.tasks {
+    position: absolute;
+    right: 10%;
+    font-size: 5rem;
+    top: 8%;
+    background-color: rgba(46, 31, 252, 0.4);
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    transition: all .8s;
+    justify-content: center;
+    align-items: flex-start;
+    width: 300px;
+    height: 250px;
+    padding-top: 30px;
+}
+
+.tasks__title {
+    position: absolute;
+    top: 0;
+    font-size: 2rem;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    padding: 0;
+    background-color: rgba(68, 252, 31, 0.8);
+    padding: 15px 20px 5px 20px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.task {
+    font-size: 3rem;
+    color: white;
+    transition: all .5s;
+}
+
+.task.complete {
+    text-decoration: line-through;
+}
